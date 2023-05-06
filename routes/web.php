@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +20,8 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('h
 Route::get('/shop/{slug?}', [\App\Http\Controllers\ShopController::class, 'index'])->name('shop.index');
 Route::get('/shop/tag/{slug?}', [\App\Http\Controllers\ShopController::class, 'tag'])->name('shop.tag');
 Route::get('/product/{product:slug}', [\App\Http\Controllers\ProductController::class, 'show'])->name('product.show');
-
+// Route::get('/export', 'UserController@export');
+Route::get('/export', [UserController::class, 'export']);
 // react route
 Route::get('products/{slug?}', [\App\Http\Controllers\ShopController::class, 'getProducts']);
 Route::get('products', [\App\Http\Controllers\HomeController::class, 'getProducts']);

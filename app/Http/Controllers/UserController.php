@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Exports\UserExport;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class UserController extends Controller
 {
@@ -15,4 +18,9 @@ class UserController extends Controller
             'status' => 200
         ]);
     }
+
+    public function export() 
+        {
+            return Excel::download(new UserExport, 'Data_user.xlsx');
+        }
 }

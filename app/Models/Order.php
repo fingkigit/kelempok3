@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Helpers\General;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\DB;
 
 class Order extends Model
 {
@@ -42,7 +43,7 @@ class Order extends Model
 	{
 		$dateCode = self::ORDERCODE . '/' . date('Ymd') . '/' . General::integerToRoman(date('m')). '/' . General::integerToRoman(date('d')). '/';
 
-		$lastOrder = self::select([\DB::raw('MAX(orders.code) AS last_code')])
+		$lastOrder = self::select([DB::raw('MAX(orders.code) AS last_code')])
 			->where('code', 'like', $dateCode . '%')
 			->first();
 

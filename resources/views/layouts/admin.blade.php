@@ -66,7 +66,8 @@
                                 <a class="dropdown-item" onclick="document.getElementById('logout-form').submit()" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
-                                </a>
+                                </a><br>
+                                <a href="{{ url('export') }}"> Export data User</a><br><br>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="post">
                                     @csrf

@@ -40,11 +40,15 @@
       <div class="humberger__menu__cart">
         <ul>
           <li>
-            <a href="#"><i class="fa fa-heart"></i> <span>1</span></a>
+            <a href="#"><i class="fa fa-heart"></i><span></span></a>
           </li>
           <li>
             <a href="#"><i class="fa fa-shopping-bag"></i> <span>{{ $cartCount }}</span></a>
           </li>
+          <li>
+            
+          </li>
+          
         </ul>
         <div class="header__cart__price">item: <span>${{ $cartTotal }}</span></div>
       </div>
@@ -115,10 +119,7 @@
           <div class="row">
             <div class="col-lg-6 col-md-6">
               <div class="header__top__left">
-                <ul>
-                  <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-                  <li>Free Shipping for all Order of $99</li>
-                </ul>
+               
               </div>
             </div>
             <div class="col-lg-6 col-md-6">
@@ -224,8 +225,8 @@
                   <i class="fa fa-phone"></i>
                 </div>
                 <div class="hero__search__phone__text">
-                  <h5>+65 11.188.888</h5>
-                  <span>support 24/7 time</span>
+                  <h5>+kelompok3</h5>
+                  
                 </div>
               </div>
             </div>
@@ -246,11 +247,7 @@
               <div class="footer__about__logo">
                 <a href="./index.html"><img src="{{ asset('frontend/img/logo.png') }}" alt="" /></a>
               </div>
-              <ul>
-                <li>Address: 60-49 Road 11378 New York</li>
-                <li>Phone: +65 11.188.888</li>
-                <li>Email: hello@colorlib.com</li>
-              </ul>
+             
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
